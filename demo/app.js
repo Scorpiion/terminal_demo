@@ -26,8 +26,8 @@ app.post('/terminals', function (req, res) {
       rows = parseInt(req.query.rows),
       term = pty.spawn(process.platform === 'win32' ? 'cmd.exe' : 'bash', [], {
         name: 'xterm-color',
-        cols: cols || 80,
-        rows: rows || 24,
+        cols: 190,
+        rows: 40,
         cwd: process.env.PWD,
         env: process.env
       });

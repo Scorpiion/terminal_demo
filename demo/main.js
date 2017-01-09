@@ -37,7 +37,9 @@ function createTerminal() {
     terminalContainer.removeChild(terminalContainer.children[0]);
   }
   term = new Terminal({
-    cursorBlink: optionElements.cursorBlink.checked
+    cursorBlink: optionElements.cursorBlink.checked,
+    cols: 190,
+    rows: 40, 
   });
   term.on('resize', function (size) {
     if (!pid) {
